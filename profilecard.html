@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./profilecard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Profile Card</title>
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+
+        </div>
+        <img src="marcelina.jpg" alt="Profile Picture">
+
+        <h1>Idoko Marcelina Uregu</h1>
+        <p>Front-end Developer</p>
+        <br> 
+        <span>About me</span>
+        <p> 
+            I'm a passionate front-end developer who loves turning 
+            designs into interactive and user-friendly web experiences. 
+            With expertise in React.js, TailwindCSS, and Styled-Components, 
+            I build sleek, scalable, and high-performance applications.
+        </p>
+        <p><i class="fa-solid fa-location-dot"></i> Lagos, Nigeria</p>
+        <a><i class="fa-solid fa-envelope"></i> idokomarcelinauregu@gmail.com</a>
+        <p>
+            <strong><i class="fa-brands fa-github"></i></strong> 
+            <a href="https://github.com/IdokoMarcelina" target="_blank">github.com/IdokoMarcelina</a>  
+        </p>
+        <p>
+            <strong><i class="fa-brands fa-linkedin"></i></strong> 
+            <a href="https://www.linkedin.com/in/marcelinaidoko" target="_blank">linkedin.com/in/marcelinaidoko</a>  
+        </p>
+        <p> <span id="currentTimeUTC" data-testid="currentTimeUTC"></span></p>
+    </div>
+
+    <script>
+        function updateUTCTime() {
+            const now = new Date();
+            const utcTime = now.toUTCString();
+            document.getElementById("currentTimeUTC").textContent = utcTime;
+        }
+        
+        updateUTCTime();
+        setInterval(updateUTCTime, 1000); 
+    </script>
+</body>
+</html>
